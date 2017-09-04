@@ -1,9 +1,36 @@
-<h1>Hello from index.cshtml</h1>
+<!-- boostrap -->
 
-<ul>
-@foreach(var stud in @ViewBag.stud)
-{
-    <li> @stud.FirstName @stud.LastName, @stud.Age </li> 
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin for student</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
 
-</ul>
+        <header class="jumbotron">
+    <h1>Hello from index.cshtml</h1>
+        </header>
+    
+    <table class="table">
+        @foreach(var stud in @ViewBag.stud)        
+        {
+            <tr>
+                <td> @stud.FirstName </td>
+                <td> @stud.LastName</td>
+                <td> @stud.Age </td> 
+            </tr>
+        }
+    </table>
+    
+    
+    </div>
+</body>
+</html>
+
+
+
+
+
+
