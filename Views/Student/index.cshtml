@@ -1,1 +1,9 @@
 <h1>Hello from index.cshtml</h1>
+
+<ul>
+@foreach(var stud in @ViewBag.stud)
+{
+    <li> @stud.FirstName @stud.LastName, @stud.Age </li> 
+}
+
+</ul>
