@@ -20,9 +20,15 @@ namespace StudentsCatalog.Controllers
             return View();
         }
         // Create
+        [HttpGet]
         public IActionResult Create()
         {
-            db.Students.Add(new Student{FirstName="Claus", LastName = "Bove", Age = 33});
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Student st)
+        {
+            db.Students.Add(st);//new Student{FirstName="Claus", LastName = "Bove", Age = 33});
             db.SaveChanges();
             return View();
         }
