@@ -1,5 +1,5 @@
 # StudentsCatalog
-** _Version: day03_ **   
+**_Version: day03_**   
 Example project from teachings throughout the whole semester    
 
 You can find the up to date version in the master branch.
