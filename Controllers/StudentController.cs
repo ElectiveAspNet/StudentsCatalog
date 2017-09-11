@@ -13,19 +13,12 @@ namespace StudentsCatalog.Controllers
     {
         // Model
         StudentDbContext db = new StudentDbContext();
-        List<Student> students = new List<Student>();
         // ReadAll in db
         public IActionResult Index()
         {
-            students.Add(new Student{FirstName="Claus", LastName = "Bove", Age = 33});
-            //students.Add(new Student{FirstName="Henning", LastName = "Jensen", Age = 63});
-            //students.Add(new Student{FirstName="Anna", LastName = "Toft", Age = 17});
-
-            ViewBag.stud = students;
-            
+            ViewBag.stud = db.Students.ToList();       
             return View();
         }
-
         // Create
         public IActionResult Create()
         {
