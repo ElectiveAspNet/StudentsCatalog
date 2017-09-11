@@ -19,6 +19,11 @@ namespace StudentsCatalog.Controllers
             ViewBag.stud = db.Students.ToList();       
             return View();
         }
+
+        // search metode
+        // søg på - FirstName
+        // få udskrevet alt info on den ene person
+
         // Create
         [HttpGet]
         public IActionResult Create()
@@ -36,6 +41,7 @@ namespace StudentsCatalog.Controllers
         // Delete
 
         // Update
+        
 
 
 
