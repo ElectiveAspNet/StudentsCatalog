@@ -9,7 +9,7 @@ namespace StudentsCatalog.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
-            optionBuilder.UseSqlite("Filename=./mydb.db");
+            optionBuilder.UseSqlite("Filename=./StudentCatalog.db");
         } 
         
     }
