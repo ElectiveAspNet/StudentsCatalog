@@ -11,18 +11,31 @@ namespace StudentsCatalog.Controllers
 {
     public class StudentController : Controller
     {
+
+        // Repositories
+
+
+
         // Model
         StudentDbContext db = new StudentDbContext();
         // ReadAll in db
         public IActionResult Index()
         {
-            ViewBag.stud = db.Students.ToList();       
+            ViewBag.stud = db.Students;       
             return View();
         }
 
         // search metode
         // søg på - FirstName
         // få udskrevet alt info on den ene person
+        public IActionResult Search(int id)
+        {
+            // Loop 
+            // LINQ
+            Student stud = db.Students.Find(id);      
+            ViewBag.studentx = stud;
+            return View();
+        }
 
         // Create
         [HttpGet]
