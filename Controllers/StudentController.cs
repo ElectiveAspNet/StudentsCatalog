@@ -21,8 +21,12 @@ namespace StudentsCatalog.Controllers
         // ReadAll in db
         public IActionResult Index()
         {
-            ViewBag.stud = db.Students;       
-            return View();
+           // ViewBag.stud = db.Students;  
+
+            IEnumerable<Student> students = db.Students;     
+            return View(students);
+
+            // return View(db.Students.ToList()); List<Student> // 
         }
 
         // search metode

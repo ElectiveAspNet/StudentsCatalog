@@ -1,5 +1,3 @@
-<!-- boostrap -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +12,7 @@
         </header>
     
     <table class="table table-striped">
-        @foreach(var stud in @ViewBag.stud)        
+        @foreach(var stud in @Model)       
         {
             <tr>
                 <td> @stud.FirstName </td>
