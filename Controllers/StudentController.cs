@@ -50,9 +50,14 @@ namespace StudentsCatalog.Controllers
         [HttpPost]
         public IActionResult Create(Student st)
         {
-            db.Students.Add(st);//new Student{FirstName="Claus", LastName = "Bove", Age = 33});
-            db.SaveChanges();
+            if(ModelState.IsValid){
+                db.Students.Add(st);//new Student{FirstName="Claus", LastName = "Bove", Age = 33});
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            
             return View();
+            
         }
 
         // Delete

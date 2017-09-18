@@ -1,3 +1,5 @@
+@model StudentsCatalog.Models.Entities.Student
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +11,17 @@
 <body>
     <h1>Student Created</h1>
 
-    <form method="post" action="/student/create">
-        <input type="text" name="FirstName"/>
-        <input type="text" name="LastName"/>
-        <input type="text" name="Age"/>
+    <form method="post" asp-action="Create" > <!-- action="/student/create" -->
+        <p> 
+        <span asp-validation-for="FirstName"></span> 
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" type="text" /></p>
+        <p>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName"  type="text" /></p>
+        <p>
+        
+        <input asp-for="Age" type="text" /></p>
         <input type="submit"  />
     </form>
 
